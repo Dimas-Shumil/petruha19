@@ -956,7 +956,7 @@ select {
   position: absolute;
   inset: -34px;
   z-index: 1;
-  background: url("../img/hero.png") center/cover no-repeat;
+  background: url("../img/hero.webp") center/cover no-repeat;
   filter: brightness(1) contrast(1.06) saturate(1.04);
   transform: translate3d(calc(var(--hero-x) * -0.12), calc(var(--hero-y) * -0.08), 0) scale(1.045);
   will-change: transform;
@@ -2084,7 +2084,7 @@ select {
   padding: 68px 58px;
   color: #f4f0e4;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.58)), url("/site/img/how-work/works-bg.png") center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.58)), url("/site/img/how-work/works-bg.webp") center/cover no-repeat;
 }
 .works-preview__frame {
   position: relative;

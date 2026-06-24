@@ -21,7 +21,7 @@
     position: absolute;
     inset: -34px;
     z-index: 1;
-    background: url('../img/hero.png') center / cover no-repeat;
+    background: url('../img/hero.webp') center / cover no-repeat;
     filter: brightness(1) contrast(1.06) saturate(1.04);
     transform: translate3d(
         calc(var(--hero-x) * -0.12),
@@ -1467,7 +1467,7 @@
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.58)),
-    url('/site/img/how-work/works-bg.png') center / cover no-repeat;
+    url('/site/img/how-work/works-bg.webp') center / cover no-repeat;
 
   &__frame {
     position: relative;
