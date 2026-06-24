@@ -221,56 +221,59 @@ const initHeader = () => {
     });
   };
 
-  const initWorksSwiper = () => {
-    const swiperElement = document.querySelector('.js-works-swiper');
+// swiper
 
-    if (!swiperElement || typeof Swiper === 'undefined') return;
+const initWorksSwiper = () => {
+  const swiperElement = document.querySelector('.js-works-swiper');
 
-    new Swiper(swiperElement, {
-      loop: true,
-      speed: 700,
-      slidesPerView: 5,
-      spaceBetween: 18,
-      grabCursor: true,
-      watchOverflow: true,
-      loopAdditionalSlides: 5,
+  if (!swiperElement || typeof Swiper === 'undefined') return;
 
-      autoplay: {
-        delay: 4200,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
+  const slidesCount = swiperElement.querySelectorAll('.swiper-slide').length;
+
+  new Swiper(swiperElement, {
+    loop: slidesCount > 5,
+    speed: 700,
+    slidesPerView: 5,
+    spaceBetween: 18,
+    grabCursor: true,
+    watchOverflow: true,
+
+    autoplay: {
+      delay: 4200,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+
+    navigation: {
+      prevEl: '.works-preview__control--prev',
+      nextEl: '.works-preview__control--next',
+    },
+
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1.1,
+        spaceBetween: 14,
       },
-
-      navigation: {
-        prevEl: '.works-preview__control--prev',
-        nextEl: '.works-preview__control--next',
+      560: {
+        slidesPerView: 2,
+        spaceBetween: 16,
       },
-
-      keyboard: {
-        enabled: true,
-        onlyInViewport: true,
+      760: {
+        slidesPerView: 3,
+        spaceBetween: 18,
       },
-
-      breakpoints: {
-        0: {
-          slidesPerView: 1.1,
-          spaceBetween: 14,
-        },
-        560: {
-          slidesPerView: 2,
-          spaceBetween: 16,
-        },
-        760: {
-          slidesPerView: 3,
-          spaceBetween: 18,
-        },
-        1200: {
-          slidesPerView: 5,
-          spaceBetween: 18,
-        },
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 18,
       },
-    });
-  };
+    },
+  });
+};
 
   const initPaintDemo = () => {
     const demo = document.querySelector('.paint-demo');
