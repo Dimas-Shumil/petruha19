@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /health
+Disallow: /admin/
+Disallow: /admin-pages/
+Disallow: /uploads/
+Disallow: /*?*
+
+Host: petruha19.ru
+Sitemap: https://petruha19.ru/sitemap.xml
