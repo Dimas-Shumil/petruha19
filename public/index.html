@@ -196,7 +196,7 @@
 
         <nav class="header__nav" aria-label="Основная навигация">
           <a class="header__nav-link" href="#services">Услуги</a>
-          <a class="header__nav-link" href="#works-preview">Портфолио</a>
+          <a class="header__nav-link" href="/portfolio">Портфолио</a>
           <a class="header__nav-link" href="#paint-demo">Цвета</a>
           <a class="header__nav-link" href="#process">Как работаем</a>
           <a class="header__nav-link" href="#contacts">Контакты</a>
@@ -209,6 +209,7 @@
           type="button"
           aria-label="Открыть меню"
           aria-expanded="false"
+          aria-controls="mobile-menu"
         >
           <span class="burger__line"></span>
           <span class="burger__line"></span>
@@ -217,10 +218,15 @@
       </div>
     </header>
 
-    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-overlay" aria-hidden="true"></div>
 
-    <div class="mobile-menu">
-      <div class="mobile-menu__dialog">
+    <div class="mobile-menu" id="mobile-menu" inert>
+      <div
+        class="mobile-menu__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Мобильное меню"
+      >
         <div class="mobile-menu__head">
           <a
             class="mobile-menu__logo"
@@ -243,7 +249,7 @@
 
         <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
           <a class="mobile-menu__link" href="#services">Услуги</a>
-          <a class="mobile-menu__link" href="#works-preview">Портфолио</a>
+          <a class="mobile-menu__link" href="/portfolio">Портфолио</a>
           <a class="mobile-menu__link" href="#paint-demo">Цвета</a>
           <a class="mobile-menu__link" href="#process">Как работаем</a>
           <a class="mobile-menu__link" href="#contacts">Контакты</a>
@@ -1393,7 +1399,11 @@
               окраса
             </p>
 
-            <div class="paint-demo__colors" aria-label="Выбор цвета автомобиля">
+            <div
+              class="paint-demo__colors"
+              role="group"
+              aria-label="Выбор цвета автомобиля"
+            >
               <button
                 class="paint-demo__color is-active"
                 type="button"
@@ -1546,7 +1556,6 @@
               src="https://yandex.ru/map-widget/v1/?um=constructor%3Af7075bcdcfb146604b324cf6e575f4bc76238639e2204e18d14d211f81b35594&amp;source=constructor"
               width="638"
               height="463"
-              frameborder="0"
               loading="lazy"
               title="Расположение кузовной мастерской PETRUHA19 в Абакане"
               referrerpolicy="no-referrer-when-downgrade"

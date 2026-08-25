@@ -26,9 +26,13 @@ $color-green: #45d55a;
 $color-border: rgba(255, 255, 255, 0.1);
 $color-border-yellow: rgba(245, 194, 27, 0.45);
 
+// Layout
+$layout-max: 1720px;
+$layout-gutter: clamp(20px, 4vw, 80px);
+
 // Effects
-$effect-glow-yellow: 0 0 24px rgba(245, 194, 27, 0.42);
-$effect-glow-yellow-strong: 0 0 42px rgba(245, 194, 27, 0.58);
+$effect-glow-yellow: 0 0 14px rgba(245, 194, 27, 0.2);
+$effect-glow-yellow-strong: 0 0 22px rgba(245, 194, 27, 0.28);
 $effect-glow-blue: 0 0 34px rgba(45, 140, 255, 0.48);
 
 $effect-shadow-dark: 0 24px 80px rgba(0, 0, 0, 0.78);
@@ -101,7 +105,7 @@ select {
 }
 
 :focus-visible {
-  outline: 1px solid $color-yellow;
+  outline: 2px solid $color-yellow;
   outline-offset: 4px;
 }
 
@@ -124,7 +128,7 @@ select {
   );
   border: 2px solid #040404;
   border-radius: 999px;
-  box-shadow: 0 0 14px rgba(245, 194, 27, 0.45);
+  box-shadow: none;
 }
 
 ::-webkit-scrollbar-thumb:hover {

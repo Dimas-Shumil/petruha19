@@ -6,21 +6,36 @@
   "type": "commonjs",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "check": "node --check server.js && node --check routes/api.routes.js && node --check routes/public.routes.js && node --check routes/auth.routes.js && node --check routes/admin.routes.js && node --check routes/admin-api.routes.js && node --check routes/admin-works.routes.js && node --check middleware/auth.js && node --check middleware/error-handler.js && node --check lib/prisma.js && node --check lib/admin-auth.js && node --check lib/upload.js && node --check services/mail.service.js && node --check scripts/create-admin.js && node --check site/js/main.js && node --check site/js/portfolio.js && node --check site/js/work.js && node --check site/js/admin/common.js && node --check site/js/admin/login.js && node --check site/js/admin/dashboard.js && node --check site/js/admin/leads.js && node --check site/js/admin/works.js && node --check site/js/admin/work-edit.js",
+    "admin:create": "node scripts/create-admin.js",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "css": "sass site/scss/main.scss site/css/main.css --style=expanded --no-source-map && sass site/scss/main.scss site/css/main.min.css --style=compressed --no-source-map && sass site/scss/portfolio.scss site/css/portfolio.css --style=expanded --no-source-map && sass site/scss/portfolio.scss site/css/portfolio.min.css --style=compressed --no-source-map && sass site/scss/work.scss site/css/work.css --style=expanded --no-source-map && sass site/scss/work.scss site/css/work.min.css --style=compressed --no-source-map && sass site/scss/admin.scss site/css/admin.css --style=expanded --no-source-map && sass site/scss/admin.scss site/css/admin.min.css --style=compressed --no-source-map"
   },
   "dependencies": {
-    "bcryptjs": "^3.0.2",
+    "@prisma/client": "6.19.3",
+    "argon2": "0.45.1",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "express-rate-limit": "^8.2.1",
-    "express-session": "^1.18.2",
     "helmet": "^8.1.0",
     "multer": "^2.0.2",
     "nodemailer": "^9.0.1",
-    "sharp": "^0.34.5"
+    "sharp": "0.35.3",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "prisma": "6.19.3",
+    "sass": "^1.102.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "overrides": {
+    "deepmerge-ts": "8.0.0"
   }
 }

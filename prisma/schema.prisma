@@ -1,0 +1,122 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum AdminRole {
+  OWNER
+  STAFF
+}
+
+enum LeadStatus {
+  NEW
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum WorkImageKind {
+  AFTER
+  BEFORE
+  GALLERY
+}
+
+model AdminUser {
+  id           Int            @id @default(autoincrement())
+  name         String
+  email        String         @unique
+  passwordHash String
+  role         AdminRole      @default(STAFF)
+  isActive     Boolean        @default(true)
+  lastLoginAt  DateTime?
+  sessions     AdminSession[]
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  @@index([role])
+  @@index([isActive])
+}
+
+model AdminSession {
+  id            Int       @id @default(autoincrement())
+  userId        Int
+  user          AdminUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash     String    @unique
+  csrfTokenHash String
+  expiresAt     DateTime
+  lastUsedAt    DateTime  @default(now())
+  ipAddress     String    @default("")
+  userAgent     String    @default("")
+  createdAt     DateTime  @default(now())
+
+  @@index([userId, expiresAt])
+  @@index([expiresAt])
+}
+
+model Lead {
+  id                Int        @id @default(autoincrement())
+  name              String
+  phone             String
+  service           String
+  car               String     @default("")
+  comment           String     @default("")
+  status            LeadStatus @default(NEW)
+  internalComment   String     @default("")
+  source            String     @default("website")
+  page              String     @default("")
+  dedupFingerprint  String
+  ipAddress         String     @default("")
+  userAgent         String     @default("")
+  consentAccepted   Boolean    @default(true)
+  consentAcceptedAt DateTime?
+  createdAt         DateTime   @default(now())
+  updatedAt         DateTime   @updatedAt
+
+  @@index([status, createdAt])
+  @@index([phone])
+  @@index([dedupFingerprint, createdAt])
+  @@index([createdAt])
+}
+
+model Work {
+  id               Int         @id @default(autoincrement())
+  title            String
+  slug             String      @unique
+  car              String
+  service          String
+  shortDescription String      @default("")
+  description      String      @default("")
+  seoTitle         String      @default("")
+  seoDescription   String      @default("")
+  durationDays     Int?
+  location         String      @default("Абакан")
+  isPublished      Boolean     @default(false)
+  showOnHome       Boolean     @default(false)
+  sortOrder        Int         @default(100)
+  images           WorkImage[]
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+
+  @@index([isPublished, sortOrder])
+  @@index([isPublished, showOnHome, sortOrder])
+  @@index([service])
+  @@index([createdAt])
+}
+
+model WorkImage {
+  id        Int           @id @default(autoincrement())
+  workId    Int
+  work      Work          @relation(fields: [workId], references: [id], onDelete: Cascade)
+  kind      WorkImageKind
+  imagePath String
+  alt       String        @default("")
+  sortOrder Int           @default(100)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@index([workId, kind, sortOrder])
+}

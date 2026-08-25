@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <link rel="stylesheet" href="/site/css/admin.min.css" />
+    <title>Работы | PETRUHA19</title>
+  </head>
+  <body class="admin-page">
+    <div class="admin-layout">
+      <div class="admin-sidebar-overlay" data-sidebar-overlay></div>
+      <aside class="admin-sidebar" data-admin-sidebar>
+        <div class="admin-sidebar__head">
+          <a class="admin-brand" href="/admin"><strong>ПЕТРУХА19</strong><img src="/site/img/customs.png" alt="Customs" /></a>
+          <button type="button" data-sidebar-close aria-label="Закрыть меню">×</button>
+        </div>
+        <nav class="admin-nav" aria-label="Навигация">
+          <a class="admin-nav__item" href="/admin"><span>01</span>Обзор</a>
+          <a class="admin-nav__item" href="/admin/leads"><span>02</span>Заявки</a>
+          <a class="admin-nav__item is-active" href="/admin/works" aria-current="page"><span>03</span>Работы</a>
+        </nav>
+        <div class="admin-sidebar__status"><i></i><span>System online</span></div>
+        <button class="admin-sidebar__logout" type="button" data-admin-logout>Выйти</button>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <button class="admin-menu-button" type="button" data-sidebar-open aria-label="Открыть меню">☰</button>
+          <div><span class="admin-kicker">Портфолио мастерской</span><h1>Работы</h1></div>
+          <div class="admin-profile"><span data-admin-avatar>А</span><strong data-admin-name>Администратор</strong></div>
+        </header>
+
+        <div class="admin-content">
+          <section class="admin-toolbar">
+            <div class="admin-tabs">
+              <button class="is-active" type="button" data-works-status="ALL">Все</button>
+              <button type="button" data-works-status="PUBLISHED">Опубликованные</button>
+              <button type="button" data-works-status="DRAFT">Черновики</button>
+            </div>
+            <div class="admin-toolbar__right">
+              <label class="admin-search"><span class="sr-only">Поиск</span><input type="search" placeholder="Автомобиль или услуга…" data-works-search /></label>
+              <a class="admin-primary-button" href="/admin/works/new">Добавить работу</a>
+            </div>
+          </section>
+          <section class="admin-works-grid" data-works-list></section>
+          <div class="admin-empty admin-empty--panel" data-works-empty hidden>Работы пока не добавлены.</div>
+        </div>
+      </main>
+    </div>
+    <div class="admin-toast" data-admin-toast role="status" aria-live="polite"></div>
+    <script src="/site/js/admin/common.js" defer></script>
+    <script src="/site/js/admin/works.js" defer></script>
+  </body>
+</html>
