@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <link rel="icon" href="/site/img/customs.png" type="image/png" />
+    <link rel="stylesheet" href="/site/css/admin.min.css" />
+    <title>Dashboard | PETRUHA19</title>
+  </head>
+  <body class="admin-page">
+    <div class="admin-layout">
+      <div class="admin-sidebar-overlay" data-sidebar-overlay></div>
+      <aside class="admin-sidebar" data-admin-sidebar>
+        <div class="admin-sidebar__head">
+          <a class="admin-brand" href="/admin"><strong>ПЕТРУХА19</strong><img src="/site/img/customs.png" alt="Customs" /></a>
+          <button type="button" data-sidebar-close aria-label="Закрыть меню">×</button>
+        </div>
+        <nav class="admin-nav" aria-label="Навигация">
+          <a class="admin-nav__item is-active" href="/admin" aria-current="page"><span>01</span>Обзор</a>
+          <a class="admin-nav__item" href="/admin/leads"><span>02</span>Заявки</a>
+          <a class="admin-nav__item" href="/admin/works"><span>03</span>Работы</a>
+        </nav>
+        <div class="admin-sidebar__status"><i></i><span>System online</span></div>
+        <button class="admin-sidebar__logout" type="button" data-admin-logout>Выйти</button>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <button class="admin-menu-button" type="button" data-sidebar-open aria-label="Открыть меню">☰</button>
+          <div><span class="admin-kicker">Управление мастерской</span><h1>Обзор</h1></div>
+          <div class="admin-profile"><span data-admin-avatar>А</span><strong data-admin-name>Администратор</strong></div>
+        </header>
+
+        <div class="admin-content">
+          <section class="admin-metrics" aria-label="Показатели">
+            <article class="admin-metric"><span>Новые заявки</span><strong data-metric-new>—</strong><i>NEW</i></article>
+            <article class="admin-metric"><span>В работе</span><strong data-metric-progress>—</strong><i>ACTIVE</i></article>
+            <article class="admin-metric"><span>Всего работ</span><strong data-metric-works>—</strong><i>WORKS</i></article>
+            <article class="admin-metric"><span>Опубликовано</span><strong data-metric-published>—</strong><i>ONLINE</i></article>
+          </section>
+
+          <section class="admin-dashboard-grid">
+            <article class="admin-panel">
+              <div class="admin-panel__head"><div><span class="admin-kicker">Последние обращения</span><h2>Свежие заявки</h2></div><a href="/admin/leads">Все заявки →</a></div>
+              <div class="admin-table-wrap">
+                <table class="admin-table">
+                  <thead><tr><th>№</th><th>Клиент</th><th>Услуга</th><th>Статус</th><th>Дата</th></tr></thead>
+                  <tbody data-dashboard-leads></tbody>
+                </table>
+                <div class="admin-empty" data-dashboard-empty hidden>Новых заявок пока нет.</div>
+              </div>
+            </article>
+
+            <aside class="admin-panel admin-panel--compact">
+              <span class="admin-kicker">Система</span>
+              <h2>Рабочий центр</h2>
+              <p>Заявки сохраняются в базе независимо от работы почты. Опубликованные работы автоматически появляются на сайте.</p>
+              <div class="admin-system-total"><span>Всего обращений</span><strong data-status-total>—</strong></div>
+              <a class="admin-primary-button admin-primary-button--wide" href="/admin/works/new">Добавить работу</a>
+            </aside>
+          </section>
+        </div>
+      </main>
+    </div>
+    <div class="admin-toast" data-admin-toast role="status" aria-live="polite"></div>
+    <script src="/site/js/admin/common.js" defer></script>
+    <script src="/site/js/admin/dashboard.js" defer></script>
+  </body>
+</html>

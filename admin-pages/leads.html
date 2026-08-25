@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <link rel="stylesheet" href="/site/css/admin.min.css" />
+    <title>Заявки | PETRUHA19</title>
+  </head>
+  <body class="admin-page">
+    <div class="admin-layout">
+      <div class="admin-sidebar-overlay" data-sidebar-overlay></div>
+      <aside class="admin-sidebar" data-admin-sidebar>
+        <div class="admin-sidebar__head">
+          <a class="admin-brand" href="/admin"><strong>ПЕТРУХА19</strong><img src="/site/img/customs.png" alt="Customs" /></a>
+          <button type="button" data-sidebar-close aria-label="Закрыть меню">×</button>
+        </div>
+        <nav class="admin-nav" aria-label="Навигация">
+          <a class="admin-nav__item" href="/admin"><span>01</span>Обзор</a>
+          <a class="admin-nav__item is-active" href="/admin/leads" aria-current="page"><span>02</span>Заявки</a>
+          <a class="admin-nav__item" href="/admin/works"><span>03</span>Работы</a>
+        </nav>
+        <div class="admin-sidebar__status"><i></i><span>System online</span></div>
+        <button class="admin-sidebar__logout" type="button" data-admin-logout>Выйти</button>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <button class="admin-menu-button" type="button" data-sidebar-open aria-label="Открыть меню">☰</button>
+          <div><span class="admin-kicker">Обращения клиентов</span><h1>Заявки</h1></div>
+          <div class="admin-profile"><span data-admin-avatar>А</span><strong data-admin-name>Администратор</strong></div>
+        </header>
+
+        <div class="admin-content">
+          <section class="admin-toolbar">
+            <div class="admin-tabs" aria-label="Фильтр статусов">
+              <button class="is-active" type="button" data-leads-status="ALL">Все <span data-status-count="ALL">0</span></button>
+              <button type="button" data-leads-status="NEW">Новые <span data-status-count="NEW">0</span></button>
+              <button type="button" data-leads-status="IN_PROGRESS">В работе <span data-status-count="IN_PROGRESS">0</span></button>
+              <button type="button" data-leads-status="COMPLETED">Готово <span data-status-count="COMPLETED">0</span></button>
+              <button type="button" data-leads-status="CANCELLED">Отменены <span data-status-count="CANCELLED">0</span></button>
+            </div>
+            <label class="admin-search"><span class="sr-only">Поиск</span><input type="search" placeholder="Имя, телефон, автомобиль…" data-leads-search /></label>
+          </section>
+
+          <section class="admin-panel">
+            <div class="admin-table-wrap">
+              <table class="admin-table admin-table--interactive">
+                <thead><tr><th>№</th><th>Клиент</th><th>Телефон</th><th>Услуга</th><th>Статус</th><th>Дата</th></tr></thead>
+                <tbody data-leads-body></tbody>
+              </table>
+              <div class="admin-empty" data-leads-empty hidden>По выбранному фильтру заявок нет.</div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div class="admin-modal" data-lead-modal hidden>
+      <button class="admin-modal__backdrop" type="button" data-modal-backdrop aria-label="Закрыть"></button>
+      <section class="admin-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="lead-dialog-title">
+        <header class="admin-modal__head"><div><span class="admin-kicker" data-lead-number>Заявка</span><h2 id="lead-dialog-title">Детали обращения</h2></div><button type="button" data-modal-close aria-label="Закрыть">×</button></header>
+        <div class="admin-lead-grid">
+          <div><span>Клиент</span><strong data-lead-name>—</strong></div>
+          <div><span>Телефон</span><strong data-lead-phone>—</strong></div>
+          <div><span>Услуга</span><strong data-lead-service>—</strong></div>
+          <div><span>Автомобиль</span><strong data-lead-car>—</strong></div>
+          <div><span>Дата</span><strong data-lead-date>—</strong></div>
+        </div>
+        <div class="admin-lead-comment"><span>Комментарий клиента</span><p data-lead-comment>—</p></div>
+        <label class="admin-field"><span>Статус</span><select data-lead-status><option value="NEW">Новая</option><option value="IN_PROGRESS">В работе</option><option value="COMPLETED">Завершена</option><option value="CANCELLED">Отменена</option></select></label>
+        <label class="admin-field"><span>Внутренний комментарий</span><textarea rows="4" maxlength="3000" data-lead-note></textarea></label>
+        <div class="admin-modal__actions">
+          <a class="admin-secondary-button" href="#" data-lead-phone-link>Позвонить</a>
+          <button class="admin-danger-button" type="button" data-lead-delete>Удалить</button>
+          <button class="admin-primary-button" type="button" data-lead-save>Сохранить</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="admin-toast" data-admin-toast role="status" aria-live="polite"></div>
+    <script src="/site/js/admin/common.js" defer></script>
+    <script src="/site/js/admin/leads.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <link rel="icon" href="/site/img/customs.png" type="image/png" />
+    <link rel="stylesheet" href="/site/css/admin.min.css" />
+    <title>Вход в админ-панель | PETRUHA19</title>
+  </head>
+  <body class="admin-login-page">
+    <main class="admin-login">
+      <section class="admin-login__brand" aria-label="PETRUHA19">
+        <div class="admin-login__brand-inner">
+          <a class="admin-brand admin-brand--login" href="/">
+            <strong>ПЕТРУХА19</strong>
+            <img src="/site/img/customs.png" alt="Customs" />
+          </a>
+          <div class="admin-login__copy">
+            <span class="admin-kicker">BODY SHOP SYSTEM</span>
+            <h1>Заявки и работы<br />в одном месте</h1>
+            <p>Рабочая панель кузовной мастерской PETRUHA19.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-login__content">
+        <form class="admin-login-card" data-login-form novalidate>
+          <span class="admin-kicker">Вход в систему</span>
+          <h2>Добро пожаловать</h2>
+          <p>Введите данные администратора</p>
+
+          <div class="admin-alert" data-login-error role="alert" hidden></div>
+
+          <label class="admin-field">
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="username" maxlength="254" required autofocus />
+          </label>
+
+          <label class="admin-field">
+            <span>Пароль</span>
+            <span class="admin-password-field">
+              <input type="password" name="password" autocomplete="current-password" maxlength="256" required />
+              <button type="button" data-password-toggle>Показать</button>
+            </span>
+          </label>
+
+          <label class="admin-check">
+            <input type="checkbox" name="rememberMe" />
+            <span>Запомнить меня</span>
+          </label>
+
+          <button class="admin-primary-button admin-primary-button--wide" type="submit" data-login-submit>
+            Войти
+          </button>
+          <small class="admin-login-card__security">Только для сотрудников PETRUHA19</small>
+        </form>
+      </section>
+    </main>
+    <script src="/site/js/admin/login.js" defer></script>
+  </body>
+</html>

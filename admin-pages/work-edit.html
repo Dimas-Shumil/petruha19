@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <link rel="stylesheet" href="/site/css/admin.min.css" />
+    <title>Редактор работы | PETRUHA19</title>
+  </head>
+  <body class="admin-page">
+    <div class="admin-layout">
+      <div class="admin-sidebar-overlay" data-sidebar-overlay></div>
+      <aside class="admin-sidebar" data-admin-sidebar>
+        <div class="admin-sidebar__head">
+          <a class="admin-brand" href="/admin"><strong>ПЕТРУХА19</strong><img src="/site/img/customs.png" alt="Customs" /></a>
+          <button type="button" data-sidebar-close aria-label="Закрыть меню">×</button>
+        </div>
+        <nav class="admin-nav" aria-label="Навигация">
+          <a class="admin-nav__item" href="/admin"><span>01</span>Обзор</a>
+          <a class="admin-nav__item" href="/admin/leads"><span>02</span>Заявки</a>
+          <a class="admin-nav__item is-active" href="/admin/works"><span>03</span>Работы</a>
+        </nav>
+        <div class="admin-sidebar__status"><i></i><span>System online</span></div>
+        <button class="admin-sidebar__logout" type="button" data-admin-logout>Выйти</button>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <button class="admin-menu-button" type="button" data-sidebar-open aria-label="Открыть меню">☰</button>
+          <div><span class="admin-kicker">Редактор портфолио</span><h1 data-editor-title>Новая работа</h1></div>
+          <div class="admin-profile"><span data-admin-avatar>А</span><strong data-admin-name>Администратор</strong></div>
+        </header>
+
+        <div class="admin-content">
+          <form class="admin-editor-layout" data-work-form>
+            <div class="admin-editor-layout__main">
+              <section class="admin-panel admin-editor-card">
+                <div class="admin-panel__head"><div><span class="admin-kicker">Шаг 1 · Основное</span><h2>Информация о работе</h2></div></div>
+                <div class="admin-form-grid admin-form-grid--2">
+                  <label class="admin-field"><span>Название работы *</span><input type="text" name="title" maxlength="180" required placeholder="Например: Toyota Mark II — полный окрас" /></label>
+                  <label class="admin-field"><span>Slug *</span><input type="text" name="slug" maxlength="120" required placeholder="toyota-mark-ii-polnyy-okras" /></label>
+                  <label class="admin-field"><span>Автомобиль *</span><input type="text" name="car" maxlength="160" required placeholder="Toyota Mark II" /></label>
+                  <label class="admin-field"><span>Услуга *</span><select name="service" required><option value="">Выберите услугу</option></select></label>
+                  <label class="admin-field"><span>Срок, дней</span><input type="number" name="durationDays" min="1" max="365" /></label>
+                  <label class="admin-field"><span>Город</span><input type="text" name="location" maxlength="120" value="Абакан" /></label>
+                </div>
+                <label class="admin-field"><span>Краткое описание</span><textarea name="shortDescription" rows="3" maxlength="500" placeholder="Короткий текст для карточки"></textarea></label>
+                <label class="admin-field"><span>Полное описание</span><textarea name="description" rows="6" maxlength="10000" placeholder="Что было сделано с автомобилем"></textarea></label>
+              </section>
+
+              <section class="admin-panel admin-editor-card">
+                <div class="admin-panel__head"><div><span class="admin-kicker">SEO</span><h2>Продвижение работы</h2></div><p>Для страницы конкретного автомобиля</p></div>
+                <label class="admin-field"><span>SEO Title</span><input type="text" name="seoTitle" maxlength="180" placeholder="Покраска Нивы в Абакане — PETRUHA19" /><small>Если оставить пустым, используется название работы.</small></label>
+                <label class="admin-field"><span>SEO Description</span><textarea name="seoDescription" rows="3" maxlength="320" placeholder="Кузовной ремонт и полный окрас Нивы в Абакане. Фото до и после работы PETRUHA19."></textarea><small>Краткое описание страницы для поисковой выдачи.</small></label>
+              </section>
+
+              <section class="admin-panel admin-editor-card admin-photo-editor" id="work-photos" data-upload-section>
+                <div class="admin-panel__head"><div><span class="admin-kicker">Шаг 2 · Фотографии</span><h2>Загрузить фото работы</h2></div><p>После всегда слева, До — справа</p></div>
+                <div class="admin-upload-lock" data-upload-lock>
+                  <strong>Сначала сохраните карточку работы</strong>
+                  <span>После первого сохранения здесь сразу включится загрузка фотографий.</span>
+                </div>
+                <div class="admin-upload-pair">
+                  <article class="admin-upload-block">
+                    <div><span class="admin-upload-block__badge">ПОСЛЕ</span><strong>Результат работы</strong></div>
+                    <div class="admin-upload-grid" data-images-after></div>
+                    <label class="admin-upload-button"><input type="file" accept="image/jpeg,image/png,image/webp" data-upload-after disabled />Выбрать фото После</label>
+                  </article>
+                  <article class="admin-upload-block">
+                    <div><span class="admin-upload-block__badge admin-upload-block__badge--before">ДО</span><strong>Исходное состояние</strong></div>
+                    <div class="admin-upload-grid" data-images-before></div>
+                    <label class="admin-upload-button"><input type="file" accept="image/jpeg,image/png,image/webp" data-upload-before disabled />Выбрать фото До</label>
+                  </article>
+                </div>
+
+                <article class="admin-upload-block admin-upload-block--gallery">
+                  <div><span class="admin-kicker">Дополнительно</span><strong>Галерея работы</strong></div>
+                  <div class="admin-upload-grid admin-upload-grid--gallery" data-images-gallery></div>
+                  <label class="admin-upload-button"><input type="file" accept="image/jpeg,image/png,image/webp" multiple data-upload-gallery disabled />Добавить фотографии</label>
+                  <small>JPEG, PNG или WebP до 10 МБ. Сервер автоматически переведёт изображения в WebP.</small>
+                </article>
+              </section>
+            </div>
+
+            <aside class="admin-editor-layout__side">
+              <section class="admin-panel admin-editor-card admin-editor-card--sticky">
+                <span class="admin-kicker">Публикация</span><h2>Статус работы</h2>
+                <label class="admin-switch"><span><strong>Опубликована</strong><small>Работа появится в общем портфолио</small></span><input type="checkbox" name="isPublished" /><i></i></label>
+                <label class="admin-switch"><span><strong>Показать на главной</strong><small>Добавить карточку в блок «Наши работы»</small></span><input type="checkbox" name="showOnHome" /><i></i></label>
+                <label class="admin-field"><span>Порядок</span><input type="number" name="sortOrder" min="0" max="1000000" value="100" /></label>
+                <p class="admin-editor-hint">Для публикации обязательны фотографии «После» и «До».</p>
+                <button class="admin-primary-button admin-primary-button--wide" type="submit" data-work-save>Сохранить</button>
+                <a class="admin-secondary-button admin-secondary-button--wide admin-photo-jump" href="#work-photos">Перейти к фотографиям ↓</a>
+                <button class="admin-danger-button admin-danger-button--wide" type="button" data-work-delete hidden>Удалить работу</button>
+              </section>
+            </aside>
+          </form>
+        </div>
+      </main>
+    </div>
+    <div class="admin-toast" data-admin-toast role="status" aria-live="polite"></div>
+    <script src="/site/js/admin/common.js" defer></script>
+    <script src="/site/js/admin/work-edit.js" defer></script>
+  </body>
+</html>
