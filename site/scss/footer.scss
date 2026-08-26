@@ -418,3 +418,93 @@
     }
   }
 }
+
+// floating quick actions
+.floating-actions {
+  position: fixed;
+  right: 18px;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  z-index: 90;
+
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(14px);
+
+  transition:
+    opacity 0.24s ease,
+    visibility 0.24s ease,
+    transform 0.24s ease;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  &__button {
+    width: 58px;
+    height: 58px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(244, 240, 228, 0.28);
+    border-radius: 50%;
+
+    background: rgba(244, 240, 228, 0.94);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+  }
+
+  &__icon {
+    width: 26px;
+    height: 26px;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 760px) {
+  .floating-actions {
+    display: flex;
+  }
+}
+
+@media (max-width: 420px) {
+  .floating-actions {
+    right: 14px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    gap: 10px;
+
+    &__button {
+      width: 56px;
+      height: 56px;
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .floating-actions__button:hover {
+    background: $color-white;
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-actions,
+  .floating-actions__button {
+    transition: none;
+  }
+}
+
