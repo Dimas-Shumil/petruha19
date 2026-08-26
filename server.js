@@ -180,7 +180,7 @@ app.use(notFoundHandler);
 app.use(errorHandler);
 
 const server = app.listen(PORT, () => {
-  console.log(`PETRUHA19 server started on port ${PORT}`);
+  console.log(`PETRUHA19 server started: http://localhost:${PORT}`);
   void reportSmtpStatus();
 });
 

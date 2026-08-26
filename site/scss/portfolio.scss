@@ -6,7 +6,6 @@
 .portfolio-page {
   min-height: 100vh;
   padding-top: 108px;
-  background: #050506;
 }
 
 .portfolio-hero {
@@ -16,7 +15,12 @@
   padding: 80px $layout-gutter;
   border-bottom: 1px solid rgba(245, 194, 27, 0.2);
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.5) 48%, rgba(0, 0, 0, 0.7) 100%),
+    linear-gradient(
+      90deg,
+      rgba(7, 10, 13, 0.76) 0%,
+      rgba(7, 10, 13, 0.32) 48%,
+      rgba(7, 10, 13, 0.5) 100%
+    ),
     url('/site/img/hero.png') 68% center / cover no-repeat;
 }
 
@@ -39,7 +43,7 @@
 .portfolio-hero h1 {
   margin: 18px 0;
   color: $color-text;
-  font-family: 'Bebas Neue', 'Oswald', Arial, sans-serif;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
   font-size: clamp(72px, 8vw, 132px);
   font-weight: 950;
   line-height: 0.78;
@@ -323,4 +327,58 @@
     letter-spacing: 0.05em;
   }
 
+}
+
+
+// MOBILE OVERFLOW HARDENING — 2026-08
+.portfolio-hero > div,
+.portfolio-catalog__head > *,
+.portfolio-work,
+.portfolio-work__body {
+  min-width: 0;
+}
+
+.portfolio-hero h1,
+.portfolio-catalog__head h2,
+.portfolio-work__body h2,
+.portfolio-work__body p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 620px) {
+  .portfolio-catalog__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-work__media {
+    height: clamp(220px, 68vw, 330px);
+  }
+
+  .portfolio-work__body h2 {
+    font-size: clamp(22px, 7vw, 30px);
+  }
+}
+
+@media (max-width: 420px) {
+  .portfolio-hero {
+    min-height: 350px;
+    padding: 42px 14px;
+  }
+
+  .portfolio-hero h1 {
+    font-size: clamp(46px, 16vw, 64px);
+    line-height: 0.84;
+  }
+
+  .portfolio-catalog {
+    padding-inline: 10px;
+  }
+
+  .portfolio-catalog__head h2 {
+    font-size: clamp(34px, 11vw, 46px);
+  }
+
+  .portfolio-work__body {
+    padding: 16px 14px 18px;
+  }
 }

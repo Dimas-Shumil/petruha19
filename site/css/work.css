@@ -16,9 +16,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background: radial-gradient(circle at 74% 14%, rgba(45, 140, 255, 0.13), transparent 26%), radial-gradient(circle at 18% 2%, rgba(245, 194, 27, 0.12), transparent 24%), linear-gradient(180deg, #030303 0%, #09090a 48%, #020202 100%);
+  background: radial-gradient(circle at 78% 10%, rgba(70, 95, 112, 0.08), transparent 30%), radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.025), transparent 22%), linear-gradient(180deg, #14181c 0%, #1a1f24 48%, #111519 100%);
   color: #f4f0e4;
-  font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+  font-family: "Fira Sans Condensed", "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.45;
   overflow-x: hidden;
@@ -124,7 +124,7 @@ select {
   flex-direction: column;
   width: 138px;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 25px;
   font-weight: 900;
   line-height: 0.8;
@@ -146,7 +146,7 @@ select {
 .header__nav-link {
   position: relative;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 15px;
   line-height: 1;
   letter-spacing: 0.1em;
@@ -182,7 +182,7 @@ select {
   border: 1px solid rgba(244, 240, 228, 0.42);
   border-radius: 14px;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 17px;
   font-weight: 900;
   line-height: 1;
@@ -309,7 +309,7 @@ select {
   flex-direction: column;
   width: 124px;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 22px;
   font-weight: 900;
   line-height: 0.8;
@@ -369,7 +369,7 @@ select {
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.018);
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 17px;
   line-height: 1;
   letter-spacing: 0.1em;
@@ -391,7 +391,7 @@ select {
 .mobile-menu__city {
   margin: 0;
   color: rgba(244, 240, 228, 0.48);
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 15px;
   line-height: 1;
   letter-spacing: 0.12em;
@@ -403,7 +403,7 @@ select {
   justify-content: center;
   min-height: 50px;
   border-radius: 14px;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
   font-weight: 900;
   line-height: 1;
@@ -765,6 +765,25 @@ body.menu-open {
     border-radius: 0;
   }
 }
+@media (max-width: 380px) {
+  .header {
+    width: calc(100% - 16px);
+  }
+  .header__inner {
+    padding-left: 12px;
+  }
+  .header__logo {
+    width: 100px;
+    font-size: 18px;
+  }
+  .header__logo img {
+    width: 68px;
+  }
+  .mobile-menu__dialog {
+    width: 100%;
+    padding: 18px 16px;
+  }
+}
 .footer {
   position: relative;
   padding: 68px 58px 34px;
@@ -790,7 +809,7 @@ body.menu-open {
   flex-direction: column;
   width: 160px;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 32px;
   font-weight: 900;
   line-height: 0.8;
@@ -807,7 +826,7 @@ body.menu-open {
   max-width: 360px;
   margin: 22px 0 0;
   color: rgba(244, 240, 228, 0.72);
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
   line-height: 1.28;
   letter-spacing: 0.05em;
@@ -822,7 +841,7 @@ body.menu-open {
 .footer__nav a {
   position: relative;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 17px;
   line-height: 1;
   letter-spacing: 0.1em;
@@ -861,7 +880,7 @@ body.menu-open {
   justify-content: center;
   min-height: 52px;
   border-radius: 14px;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 14px;
   font-weight: 900;
   line-height: 1;
@@ -905,7 +924,7 @@ body.menu-open {
 .footer__bottom p {
   margin: 0;
   color: rgba(244, 240, 228, 0.48);
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.09em;
@@ -913,7 +932,7 @@ body.menu-open {
 }
 .footer__policy {
   color: rgba(244, 240, 228, 0.48);
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0.09em;
@@ -1093,9 +1112,7 @@ body.menu-open {
   }
 }
 .work-detail {
-  padding: 138px clamp(20px, 4vw, 80px) 88px;
-  background: linear-gradient(rgba(245, 194, 27, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(245, 194, 27, 0.025) 1px, transparent 1px), #050506;
-  background-size: 72px 72px;
+  padding: 78px clamp(20px, 4vw, 80px) 88px;
 }
 
 .work-detail > section {
@@ -1127,7 +1144,7 @@ body.menu-open {
 .work-detail__state strong {
   max-width: 760px;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: clamp(36px, 6vw, 72px);
   line-height: 1;
   text-transform: uppercase;
@@ -1172,7 +1189,7 @@ body.menu-open {
 .work-detail__hero h1 {
   max-width: 1120px;
   margin: 0;
-  font-family: "Bebas Neue", "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: clamp(62px, 8vw, 132px);
   line-height: 0.88;
   letter-spacing: 0.01em;
@@ -1257,7 +1274,7 @@ body.menu-open {
 
 .work-detail__section-head h2 {
   margin: 8px 0 30px;
-  font-family: "Bebas Neue", "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: clamp(42px, 5vw, 76px);
   line-height: 0.95;
   text-transform: uppercase;
@@ -1352,5 +1369,65 @@ body.menu-open {
     align-items: stretch;
     flex-direction: column;
     margin-top: 64px !important;
+  }
+}
+.work-detail__hero,
+.work-detail__cta > *,
+.work-detail__section-head,
+.work-detail__compare figure {
+  min-width: 0;
+}
+
+.work-detail__hero h1,
+.work-detail__section-head h2,
+.work-detail__cta h2,
+.work-detail__story > p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .work-detail__hero h1 {
+    font-size: clamp(42px, 13vw, 62px);
+    line-height: 0.9;
+  }
+  .work-detail__section-head h2 {
+    font-size: clamp(36px, 11vw, 52px);
+  }
+  .work-detail__cta > a {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .work-detail {
+    padding-inline: 12px;
+  }
+  .work-detail__hero h1 {
+    font-size: clamp(38px, 12.5vw, 52px);
+  }
+  .work-detail__hero > p {
+    margin-top: 20px;
+    font-size: 17px;
+  }
+  .work-detail__compare figure {
+    height: 300px;
+  }
+  .work-detail__compare figcaption {
+    top: 12px;
+    left: 12px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .work-detail__compare figcaption.is-before {
+    right: 12px;
+  }
+  .work-detail__story,
+  .work-detail__gallery {
+    padding-top: 58px;
+  }
+  .work-detail__cta {
+    gap: 22px;
+    padding: 24px 18px;
   }
 }

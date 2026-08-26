@@ -15,9 +15,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background: radial-gradient(circle at 74% 14%, rgba(45, 140, 255, 0.13), transparent 26%), radial-gradient(circle at 18% 2%, rgba(245, 194, 27, 0.12), transparent 24%), linear-gradient(180deg, #030303 0%, #09090a 48%, #020202 100%);
+  background: radial-gradient(circle at 78% 10%, rgba(70, 95, 112, 0.08), transparent 30%), radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.025), transparent 22%), linear-gradient(180deg, #14181c 0%, #1a1f24 48%, #111519 100%);
   color: #f4f0e4;
-  font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+  font-family: "Fira Sans Condensed", "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.45;
   overflow-x: hidden;
@@ -121,7 +121,7 @@ select {
   flex-direction: column;
   width: 160px;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 32px;
   font-weight: 900;
   line-height: 0.8;
@@ -138,7 +138,7 @@ select {
   max-width: 360px;
   margin: 22px 0 0;
   color: rgba(244, 240, 228, 0.72);
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
   line-height: 1.28;
   letter-spacing: 0.05em;
@@ -153,7 +153,7 @@ select {
 .footer__nav a {
   position: relative;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 17px;
   line-height: 1;
   letter-spacing: 0.1em;
@@ -192,7 +192,7 @@ select {
   justify-content: center;
   min-height: 52px;
   border-radius: 14px;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 14px;
   font-weight: 900;
   line-height: 1;
@@ -236,7 +236,7 @@ select {
 .footer__bottom p {
   margin: 0;
   color: rgba(244, 240, 228, 0.48);
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.09em;
@@ -244,7 +244,7 @@ select {
 }
 .footer__policy {
   color: rgba(244, 240, 228, 0.48);
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0.09em;
