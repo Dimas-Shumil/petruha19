@@ -16,9 +16,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background: radial-gradient(circle at 74% 14%, rgba(45, 140, 255, 0.13), transparent 26%), radial-gradient(circle at 18% 2%, rgba(245, 194, 27, 0.12), transparent 24%), linear-gradient(180deg, #030303 0%, #09090a 48%, #020202 100%);
+  background: radial-gradient(circle at 78% 10%, rgba(70, 95, 112, 0.08), transparent 30%), radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.025), transparent 22%), linear-gradient(180deg, #14181c 0%, #1a1f24 48%, #111519 100%);
   color: #f4f0e4;
-  font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+  font-family: "Fira Sans Condensed", "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.45;
   overflow-x: hidden;
@@ -124,7 +124,7 @@ select {
   flex-direction: column;
   width: 138px;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 25px;
   font-weight: 900;
   line-height: 0.8;
@@ -146,7 +146,7 @@ select {
 .header__nav-link {
   position: relative;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 15px;
   line-height: 1;
   letter-spacing: 0.1em;
@@ -182,7 +182,7 @@ select {
   border: 1px solid rgba(244, 240, 228, 0.42);
   border-radius: 14px;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 17px;
   font-weight: 900;
   line-height: 1;
@@ -309,7 +309,7 @@ select {
   flex-direction: column;
   width: 124px;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 22px;
   font-weight: 900;
   line-height: 0.8;
@@ -369,7 +369,7 @@ select {
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.018);
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 17px;
   line-height: 1;
   letter-spacing: 0.1em;
@@ -391,7 +391,7 @@ select {
 .mobile-menu__city {
   margin: 0;
   color: rgba(244, 240, 228, 0.48);
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 15px;
   line-height: 1;
   letter-spacing: 0.12em;
@@ -403,7 +403,7 @@ select {
   justify-content: center;
   min-height: 50px;
   border-radius: 14px;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
   font-weight: 900;
   line-height: 1;
@@ -765,6 +765,25 @@ body.menu-open {
     border-radius: 0;
   }
 }
+@media (max-width: 380px) {
+  .header {
+    width: calc(100% - 16px);
+  }
+  .header__inner {
+    padding-left: 12px;
+  }
+  .header__logo {
+    width: 100px;
+    font-size: 18px;
+  }
+  .header__logo img {
+    width: 68px;
+  }
+  .mobile-menu__dialog {
+    width: 100%;
+    padding: 18px 16px;
+  }
+}
 .footer {
   position: relative;
   padding: 68px 58px 34px;
@@ -790,7 +809,7 @@ body.menu-open {
   flex-direction: column;
   width: 160px;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 32px;
   font-weight: 900;
   line-height: 0.8;
@@ -807,7 +826,7 @@ body.menu-open {
   max-width: 360px;
   margin: 22px 0 0;
   color: rgba(244, 240, 228, 0.72);
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
   line-height: 1.28;
   letter-spacing: 0.05em;
@@ -822,7 +841,7 @@ body.menu-open {
 .footer__nav a {
   position: relative;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 17px;
   line-height: 1;
   letter-spacing: 0.1em;
@@ -861,7 +880,7 @@ body.menu-open {
   justify-content: center;
   min-height: 52px;
   border-radius: 14px;
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 14px;
   font-weight: 900;
   line-height: 1;
@@ -905,7 +924,7 @@ body.menu-open {
 .footer__bottom p {
   margin: 0;
   color: rgba(244, 240, 228, 0.48);
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.09em;
@@ -913,7 +932,7 @@ body.menu-open {
 }
 .footer__policy {
   color: rgba(244, 240, 228, 0.48);
-  font-family: "Bebas Neue", "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0.09em;
@@ -1092,10 +1111,77 @@ body.menu-open {
     padding-top: 22px;
   }
 }
+.floating-actions {
+  position: fixed;
+  right: 18px;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  z-index: 90;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(14px);
+  transition: opacity 0.24s ease, visibility 0.24s ease, transform 0.24s ease;
+}
+.floating-actions.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.floating-actions__button {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(244, 240, 228, 0.28);
+  border-radius: 50%;
+  background: rgba(244, 240, 228, 0.94);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.floating-actions__icon {
+  width: 26px;
+  height: 26px;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .floating-actions {
+    display: flex;
+  }
+}
+@media (max-width: 420px) {
+  .floating-actions {
+    right: 14px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    gap: 10px;
+  }
+  .floating-actions__button {
+    width: 56px;
+    height: 56px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .floating-actions__button:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floating-actions,
+  .floating-actions__button {
+    transition: none;
+  }
+}
 .portfolio-page {
   min-height: 100vh;
   padding-top: 108px;
-  background: #050506;
 }
 
 .portfolio-hero {
@@ -1104,7 +1190,7 @@ body.menu-open {
   min-height: 520px;
   padding: 80px clamp(20px, 4vw, 80px);
   border-bottom: 1px solid rgba(245, 194, 27, 0.2);
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.5) 48%, rgba(0, 0, 0, 0.7) 100%), url("/site/img/hero.png") 68% center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(7, 10, 13, 0.76) 0%, rgba(7, 10, 13, 0.32) 48%, rgba(7, 10, 13, 0.5) 100%), url("/site/img/hero.png") 68% center/cover no-repeat;
 }
 
 .portfolio-hero > div {
@@ -1126,10 +1212,10 @@ body.menu-open {
 .portfolio-hero h1 {
   margin: 18px 0;
   color: #f4f0e4;
-  font-family: "Bebas Neue", "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-size: clamp(72px, 8vw, 132px);
   font-weight: 950;
-  line-height: 0.78;
+  line-height: 0.9;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
@@ -1387,5 +1473,49 @@ body.menu-open {
     margin-top: 13px;
     font-size: 10px;
     letter-spacing: 0.05em;
+  }
+}
+.portfolio-hero > div,
+.portfolio-catalog__head > *,
+.portfolio-work,
+.portfolio-work__body {
+  min-width: 0;
+}
+
+.portfolio-hero h1,
+.portfolio-catalog__head h2,
+.portfolio-work__body h2,
+.portfolio-work__body p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 620px) {
+  .portfolio-catalog__grid {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-work__media {
+    height: clamp(220px, 68vw, 330px);
+  }
+  .portfolio-work__body h2 {
+    font-size: clamp(22px, 7vw, 30px);
+  }
+}
+@media (max-width: 420px) {
+  .portfolio-hero {
+    min-height: 350px;
+    padding: 42px 14px;
+  }
+  .portfolio-hero h1 {
+    font-size: clamp(46px, 16vw, 64px);
+    line-height: 0.84;
+  }
+  .portfolio-catalog {
+    padding-inline: 10px;
+  }
+  .portfolio-catalog__head h2 {
+    font-size: clamp(34px, 11vw, 46px);
+  }
+  .portfolio-work__body {
+    padding: 16px 14px 18px;
   }
 }

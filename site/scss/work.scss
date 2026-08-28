@@ -4,12 +4,7 @@
 
 // Individual portfolio work
 .work-detail {
-  padding: 138px $layout-gutter 88px;
-  background:
-    linear-gradient(rgba(245, 194, 27, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 194, 27, 0.025) 1px, transparent 1px),
-    #050506;
-  background-size: 72px 72px;
+  padding: 78px $layout-gutter 88px;
 }
 
 .work-detail > section {
@@ -41,7 +36,7 @@
 .work-detail__state strong {
   max-width: 760px;
   color: $color-text;
-  font-family: 'Bebas Neue', 'Oswald', Arial, sans-serif;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
   font-size: clamp(36px, 6vw, 72px);
   line-height: 1;
   text-transform: uppercase;
@@ -86,7 +81,7 @@
 .work-detail__hero h1 {
   max-width: 1120px;
   margin: 0;
-  font-family: 'Bebas Neue', 'Oswald', Arial, sans-serif;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
   font-size: clamp(62px, 8vw, 132px);
   line-height: 0.88;
   letter-spacing: 0.01em;
@@ -171,7 +166,7 @@
 
 .work-detail__section-head h2 {
   margin: 8px 0 30px;
-  font-family: 'Bebas Neue', 'Oswald', Arial, sans-serif;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
   font-size: clamp(42px, 5vw, 76px);
   line-height: 0.95;
   text-transform: uppercase;
@@ -273,5 +268,78 @@
     align-items: stretch;
     flex-direction: column;
     margin-top: 64px !important;
+  }
+}
+
+
+// MOBILE OVERFLOW HARDENING — 2026-08
+.work-detail__hero,
+.work-detail__cta > *,
+.work-detail__section-head,
+.work-detail__compare figure {
+  min-width: 0;
+}
+
+.work-detail__hero h1,
+.work-detail__section-head h2,
+.work-detail__cta h2,
+.work-detail__story > p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .work-detail__hero h1 {
+    font-size: clamp(42px, 13vw, 62px);
+    line-height: 0.9;
+  }
+
+  .work-detail__section-head h2 {
+    font-size: clamp(36px, 11vw, 52px);
+  }
+
+  .work-detail__cta > a {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .work-detail {
+    padding-inline: 12px;
+  }
+
+  .work-detail__hero h1 {
+    font-size: clamp(38px, 12.5vw, 52px);
+  }
+
+  .work-detail__hero > p {
+    margin-top: 20px;
+    font-size: 17px;
+  }
+
+  .work-detail__compare figure {
+    height: 300px;
+  }
+
+  .work-detail__compare figcaption {
+    top: 12px;
+    left: 12px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .work-detail__compare figcaption.is-before {
+    right: 12px;
+  }
+
+  .work-detail__story,
+  .work-detail__gallery {
+    padding-top: 58px;
+  }
+
+  .work-detail__cta {
+    gap: 22px;
+    padding: 24px 18px;
   }
 }

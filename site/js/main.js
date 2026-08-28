@@ -658,7 +658,40 @@ function getLeadPhoneDigits(value) {
     return digits;
 }
 
+
+
+const initFloatingActions = () => {
+  const actions = document.querySelector('[data-floating-actions]');
+  const footer = document.querySelector('.footer');
+
+  if (!actions || !footer) return;
+
+  const scrollThreshold = 120;
+  const footerOffset = 80;
+  let ticking = false;
+
+  const updateVisibility = () => {
+    const hasScrolled = window.scrollY > scrollThreshold;
+    const footerTop = footer.getBoundingClientRect().top;
+    const footerIsNear = footerTop <= window.innerHeight + footerOffset;
+
+    actions.classList.toggle('is-visible', hasScrolled && !footerIsNear);
+    ticking = false;
+  };
+
+  const requestUpdate = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateVisibility);
+  };
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate);
+  updateVisibility();
+};
+
   initHeader();
+  initFloatingActions();
   initHeroTilt();
   initCompareSliders();
   initWorksSwiper();

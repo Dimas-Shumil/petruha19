@@ -32,7 +32,7 @@
     flex-direction: column;
     width: 138px;
     color: $color-text;
-    font-family: 'Bebas Neue', 'Oswald', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
     font-weight: 900;
     line-height: 0.8;
@@ -57,7 +57,7 @@
   &__nav-link {
     position: relative;
     color: $color-text;
-    font-family: 'Bebas Neue', 'Oswald', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
     font-size: 15px;
     line-height: 1;
     letter-spacing: 0.1em;
@@ -97,7 +97,7 @@
     border: 1px solid rgba(244, 240, 228, 0.42);
     border-radius: 14px;
     color: $color-text;
-    font-family: 'Bebas Neue', 'Oswald', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
     font-size: 17px;
     font-weight: 900;
     line-height: 1;
@@ -262,7 +262,7 @@
     flex-direction: column;
     width: 124px;
     color: $color-text;
-    font-family: 'Bebas Neue', 'Oswald', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
     font-size: 22px;
     font-weight: 900;
     line-height: 0.8;
@@ -333,7 +333,7 @@
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.018);
     color: $color-text;
-    font-family: 'Bebas Neue', 'Oswald', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
     font-size: 17px;
     line-height: 1;
     letter-spacing: 0.1em;
@@ -362,7 +362,7 @@
   &__city {
     margin: 0;
     color: $color-text-soft;
-    font-family: 'Bebas Neue', 'Oswald', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
     font-size: 15px;
     line-height: 1;
     letter-spacing: 0.12em;
@@ -376,7 +376,7 @@
     justify-content: center;
     min-height: 50px;
     border-radius: 14px;
-    font-family: 'Bebas Neue', 'Oswald', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
     font-weight: 900;
     line-height: 1;
@@ -813,5 +813,31 @@ body.menu-open {
       padding: 20px;
       border-radius: 0;
     }
+  }
+}
+
+
+// NARROW PHONE HARDENING — 2026-08
+@media (max-width: 380px) {
+  .header {
+    width: calc(100% - 16px);
+  }
+
+  .header__inner {
+    padding-left: 12px;
+  }
+
+  .header__logo {
+    width: 100px;
+    font-size: 18px;
+  }
+
+  .header__logo img {
+    width: 68px;
+  }
+
+  .mobile-menu__dialog {
+    width: 100%;
+    padding: 18px 16px;
   }
 }
